@@ -6,6 +6,7 @@ import {
 
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
+import AnotherScreen from './AnotherScreen';
 
 const Nav = createStackNavigator(
   {
@@ -14,7 +15,10 @@ const Nav = createStackNavigator(
     },
     Detail: {
       screen: DetailScreen
-    }
+    },
+    Another: {
+      screen: AnotherScreen
+    },
   },
   {
     initialRouteName: "Home", HeaderMode: "none"

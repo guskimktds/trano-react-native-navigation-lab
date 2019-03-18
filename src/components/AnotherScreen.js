@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-export default class DetailScreen extends React.Component {
+export default class AnotherScreen extends React.Component {
 
   render() {
     const { navigation } = this.props;
@@ -11,18 +11,18 @@ export default class DetailScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.topMenu}>
-          <Text>Detail Screen</Text>
+          <Text>Another Screen</Text>
           <Button
-            title="Go to Detail... again"
-            onPress={() => this.props.navigation.push('Detail')}
+            title="Go to Another... again"
+            onPress={() => this.props.navigation.push('Another')}
+          />
+          <Button
+            title="Go to Detail"
+            onPress={() => this.props.navigation.navigate('Detail')}
           />
           <Button
             title="Go to Home"
             onPress={() => this.props.navigation.navigate('Home')}
-          />
-          <Button
-            title="Go to Another"
-            onPress={() => this.props.navigation.navigate('Another')}
           />
           <Button
             title="Go back"
@@ -32,7 +32,7 @@ export default class DetailScreen extends React.Component {
 
         <View style={styles.contents}>
           <Text>
-              여기는 카풀운행정보 등록화면 영역
+              여기는 Another 영역
           </Text>
         </View>
 
